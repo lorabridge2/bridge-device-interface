@@ -44,5 +44,8 @@
 	"dependencies": {
 		"async-mqtt": "^2.6.3",
 		"redis": "^4.7.0"
+	},
+	"optionalDependencies": {
+		"@tailwindcss/oxide-linux-arm-musleabihf": "*"
 	}
 }
