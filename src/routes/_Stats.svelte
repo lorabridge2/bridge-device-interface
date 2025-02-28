@@ -10,7 +10,7 @@
 		TableHeadCell
 	} from 'flowbite-svelte';
 	console.log(stats);
-	const Z_INIT = 300;
+	const Z_INIT = 254;
 	let lock = false;
 	let zcount = 0;
 
@@ -32,8 +32,9 @@
 	}
 </script>
 
-<Card size="sm">
-	<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Stats</h5>
+<Card size="md" class="w-[25rem]">
+	<div class="mb-5 flex justify-between"><h5 class="inline-block mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Stats</h5>
+	<Button class="w-1/2" color="blue" disabled={zcount>0 ?true:false} pill outline on:click={zjoin}>{zcount > 0 ? 'Join timeout: '+zcount+' sec' : 'Enable Zigbee join'}</Button></div>
 	<p class="font-normal text-gray-700 dark:text-gray-400">
 		<Table divClass="relative overflow-x-auto sm:rounded-lg border-2 border-dashed">
 			<TableBody>
@@ -81,7 +82,7 @@
 					class="odd:bg-white even:bg-gray-100 dark:odd:bg-gray-800 dark:even:bg-gray-700"
 				>
 					<TableHeadCell scope="col" class="px-6 py-3">Last Boot:</TableHeadCell>
-					<TableBodyCell class="pr-6 text-right break-words whitespace-break-spaces"
+					<TableBodyCell class="w-5 pr-6 text-right break-words whitespace-break-spaces"
 						>{new Date(stats.uptime).toUTCString()}</TableBodyCell
 					>
 				</TableBodyRow>
@@ -113,11 +114,3 @@
 		</Table>
 	</p>
 </Card>
-
-<div class="mt-8">
-	<Button color="blue" pill outline on:click={zjoin}>Enable Zigbee join</Button>
-	<span
-		class="mb-2 ml-5 inline-block text-lg font-medium tracking-tight text-gray-900 dark:text-white"
-		style="visibility: {zcount > 0 ? 'visible' : 'hidden'}">Join timeout: {zcount} sec</span
-	>
-</div>

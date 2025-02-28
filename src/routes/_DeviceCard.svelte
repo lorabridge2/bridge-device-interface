@@ -65,7 +65,7 @@
 					on:click={() => {
 						removeModal = true;
 					}}
-					><Trash class="text-blue-700 dark:text-red-700" />
+					><Trash class="text-blue-600 dark:text-blue-500" />
 				</Button>
 				<Button
 					name="Button"
@@ -74,7 +74,7 @@
 						editFunc(ieeeAddr);
 					}}
 				>
-					<AdjustmentsHorizontal class="text-blue-700 dark:text-red-700" />
+					<AdjustmentsHorizontal class="text-blue-600 dark:text-blue-500" />
 				</Button>
 			</ButtonGroup>
 		</span>
