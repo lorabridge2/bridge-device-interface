@@ -75,7 +75,7 @@
 						class="odd:bg-white even:bg-gray-100 dark:odd:bg-gray-800 dark:even:bg-gray-700"
 					>
 						<TableHeadCell scope="col" class="px-6 py-3">Temperature:</TableHeadCell>
-						<TableBodyCell class="pr-6 text-right">{stats.temp.toFixed(2)} %</TableBodyCell>
+						<TableBodyCell class="pr-6 text-right">{stats.temp.toFixed(2)} °C</TableBodyCell>
 					</TableBodyRow>
 				{/if}
 				<TableBodyRow
